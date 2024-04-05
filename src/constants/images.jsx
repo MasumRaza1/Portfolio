@@ -38,6 +38,12 @@ import emiway from '../assets/emiway.png';
 import btn from '../assets/btn.png';
 import alkabir from '../assets/alkabir.png';
 import cgcl from '../assets/cgcl.png';
+import masumlogo from '../assets/masum-logo.svg';
+import heroimage from '../assets/heroimage.png';
+import leetcode from '../assets/leetcode.png';
+import hackerrank from '../assets/hackerrank.png';
+import gfg from '../assets/gfg.png';
+import github from '../assets/github.png';
 export default {
   email,
   mobile,
@@ -75,5 +81,11 @@ export default {
   emiway,
   btn,
   alkabir,
-  cgcl
+  cgcl,
+  masumlogo,
+  heroimage,
+  leetcode,
+  hackerrank,
+  gfg,
+  github
 };

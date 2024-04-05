@@ -6,7 +6,6 @@ import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
 import { FaDownload } from 'react-icons/fa';
 import { urlFor, client } from '../../client';
-// import { urlFor } from '../../client';
 
 import './Header.scss';
 
@@ -83,7 +82,7 @@ const Header = () => {
       {resumes.map(resume => (
             <div className="tag-cmp app__flex">
               <a href={getUrlFromId(resume.file.asset._ref)} download={resume.file.asset.originalFilename} target='_blank' className="resume-link">
-              <FaDownload className="download-icon" /> {resume.title}
+              <FaDownload className="download-icon" /> {resume.title} 😎 
             </a>
             </div>
       
@@ -96,7 +95,7 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.emiway} alt="profile_bg" />
+        <img src={images.heroimage} alt="profile_bg" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: 'easeInOut' }}

@@ -4,15 +4,18 @@ import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
+import { images } from '../../constants';
 import './Skills.scss';
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [codingProfiles, setCodingProfiles] = useState([]);
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
     const skillsQuery = '*[_type == "skills"]';
+    const codingQuery = '*[_type == "codingprofile"]';
 
     client.fetch(query).then((data) => {
       setExperiences(data);
@@ -21,6 +24,11 @@ const Skills = () => {
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
     });
+
+    client.fetch(codingQuery).then((data) => {
+      setCodingProfiles(data);
+    });
+
   }, []);
 
   return (
@@ -84,6 +92,19 @@ const Skills = () => {
           ))}
         </div>
       </div>
+
+      <h2 className="coding-text">Coding Profiles</h2>
+<div className="app__footer-cards">
+  {codingProfiles.map((profile, index) => (
+     <a href={profile.codingUrl} target="_blank" rel="noopener noreferrer" className="p-text">
+    <div className="app__footer-card" style={{ backgroundColor: profile.bgColor }} key={index}>
+      <img src={urlFor(profile.icon)} alt={profile.name} />
+     {profile.name}
+    </div>
+    </a>
+  ))}
+</div>
+
     </>
   );
 };
