@@ -1,6 +1,6 @@
- [Netlify](https://masum-potfolio.netlify.app/).
- https://masumraza.sanity.studio/
-Backend Manage with [Sanity]( https://masumraza.sanity.studio/).
+ ## [Netlify](https://masum-potfolio.netlify.app/).
+
+ `Backend Manage with` [Sanity]( https://masumraza.sanity.studio/).
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
